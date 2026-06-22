@@ -1,10 +1,9 @@
 // Global Imports
 use axum::{
     Router,
-    routing::{delete, get, post, put},
+    routing::{delete, get},
 };
 use serde::{Deserialize, Serialize};
-use sqlx::SqlitePool;
 
 // Configuration
 const SERVER_ADDRESS: &'static str = "127.0.0.1:3000";
@@ -31,11 +30,10 @@ struct CreateUserResponse {
 
 // Database Handler
 mod db {
-    use std::result;
 
-    use crate::{CreateUserRequest, SQLITE_DB_ADDRESS, User};
-    use axum::body::{self, Body};
-    use sqlx::{SqlitePool, pool, types::Json};
+    use crate::{SQLITE_DB_ADDRESS, User};
+
+    use sqlx::SqlitePool;
 
     pub async fn setup() {
         let pool = get_pool().await;
@@ -89,7 +87,7 @@ mod db {
 // Request Handler
 mod handler {
     use crate::{CreateUserRequest, CreateUserResponse, User, db};
-    use axum::{Json, body, extract::Path};
+    use axum::{Json, extract::Path};
 
     pub async fn get_users() -> Json<Vec<User>> {
         let users = db::get_users().await;
@@ -112,6 +110,8 @@ async fn main() {
         .route("/users", get(handler::get_users).post(handler::create_user))
         .route("/users/{id}", delete(handler::delete_user));
     let listener = tokio::net::TcpListener::bind(SERVER_ADDRESS).await.unwrap();
+
+    db::setup().await;
 
     axum::serve(listener, app).await.unwrap();
 }
