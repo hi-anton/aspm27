@@ -1,0 +1,77 @@
+ .contacts-window {
+            background-color: lightpink;
+            width: 400px;
+            height: 100%;
+            border-radius: 10px;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .top-contact-bar {
+            background-color: lightblue;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-search-bar {
+            flex: 1;
+            margin-right: 5px;
+        }
+
+        .contacts {
+            background-color: lightblue;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .contact {
+            background-color: lightpink;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .contact-heading {
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        .contact-number,
+        .contact-name {
+            font-size: 13px;
+            color: rgb(88, 88, 88);
+            margin: 2px;
+        }
+
+        .contact-picture-cont {
+            margin-right: 10px;
+        }
+
+        .contact-picture {
+            width: 50px;
+            border-radius: 25px;
+        }
+
+        .add-contact-button-cont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-contact-button {
+            border-radius: 25px;
+            border: none;
+            background-color: lightpink;
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+        }
