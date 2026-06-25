@@ -1,1 +1,7 @@
-/target
+target/
+.*
+*.db
+*.pem
+*.conf
+*.sqlite3
+*.sqlite
