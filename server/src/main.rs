@@ -134,7 +134,7 @@ mod handler {
         let user: User = db::get_user_by_id(id).await;
         Json(user)
     }
-    pub async fn login(Json(body): Json<SendUserRequest>) -> Json<CreateUserResponse> {}
+    // pub async fn login(Json(body): Json<SendUserRequest>) -> Json<CreateUserResponse> {}
 }
 
 // Entry Point
