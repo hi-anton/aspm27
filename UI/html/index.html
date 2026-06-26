@@ -1,43 +1,30 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="/UI/css/contacts-window.css" />
-        <style>
-            html,
-            body {
-                height: 100vh;
-                width: 100vw;
-                margin: 0;
-            }
 
-            body {
-                background-color: black;
-                padding: 10px;
-                display: flex;
-                gap: 10px;
-                box-sizing: border-box;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aspm</title>
+    <link rel="stylesheet" href="/UI/css/contacts-window.css">
+    <link rel="stylesheet" href="/UI/css/general.css">
+    <link rel="stylesheet" href="/UI/css/chat-window.css">
+</head>
 
-            p {
-                font-family: Arial;
-            }
-
-            .chat-window {
-                background-color: lightblue;
-                flex: 1;
-                height: 100%;
-                border-radius: 10px;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="contacts-window">
-            <div class="top-contact-bar">
-                <input type="search" class="contact-search-bar" />
+<body>
+    <div class="contacts-window">
+        <div class="top-contact-bar">
+            <input type="search" class="contact-search-bar" placeholder="Search Contacts">
+        </div>
+        <div class="contacts">
+            <div class="contact">
+                <div class="contact-picture-cont">
+                    <img src="/UI/imgs/kreise.pdf" class="contact-picture">
+                </div>
+                <div class="contact-info">
+                    <p class="contact-heading">Kontakt 1</p>
+                    <p class="contact-number"> Number: 1234567890</p>
+                    <p class="contact-name"> Name: Max Mustermann</p>
+                </div>
             </div>
             <div class="contacts">
                 <div class="contact">
@@ -71,6 +58,44 @@
                 </div>
             </div>
         </div>
-        <div class="chat-window"></div>
-    </body>
+    </div>
+    <div class="chat-window">
+        <div class="opened-contact">
+            <div class="contact-picture-cont">
+                <img src="/UI/imgs/kreise.pdf" class="contact-picture">
+            </div>
+            <div class="contact-info">
+                <p class="contact-heading">Kontakt 1</p>
+                <p class="contact-number"> Number: 1234567890</p>
+                <p class="contact-name"> Name: Max Mustermann</p>
+            </div>
+        </div>
+        <div class="chat-area">
+            <div class="message-them">
+                <p class="sender">Max Mustermann</p>
+                <div class="message-cont">
+                    <p class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nostrum vero harum
+                        natus dignissimos deserunt consequatur rem? Impedit debitis sequi quos reprehenderit nihil ab
+                        ipsum vitae facilis cumque, ducimus possimus!</p>
+                </div>
+            </div>
+            <div class="message-me">
+                <p class="sender">Du</p>
+                <div class="message-cont">
+                    <p class="message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex deleniti delectus
+                        incidunt sunt, quam, fugit tenetur neque reiciendis eos odit vitae nobis. Earum eligendi autem
+                        harum
+                        sit nemo quisquam sunt.</p>
+                </div>
+            </div>
+        </div>
+        <div class="message-bar">
+            <input type="text" class="message-text-bar" placeholder="Message">
+            <button class="send-button">Send</button>
+            <button class="actions-button">+</button>
+        </div>
+
+    </div>
+</body>
+
 </html>
