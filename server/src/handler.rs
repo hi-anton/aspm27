@@ -34,3 +34,7 @@ pub async fn login(Json(body): Json<SendUserRequest>) -> Result<Json<LoginRespon
         Err(StatusCode::UNAUTHORIZED)
     }
 }
+
+pub async fn get_user_chats() {}
+pub async fn create_chat() {}
+pub async fn get_chat() {}
