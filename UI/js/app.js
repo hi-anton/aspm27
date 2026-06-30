@@ -38,4 +38,39 @@ async function loadUsers() {
   }
 }
 
+const messageInput = document.querySelector(".message-text-bar");
+const sendButton = document.querySelector(".send-button");
+const chatArea = document.querySelector(".chat-area");
+
+function displayMessage() {
+  const text = messageInput.value.trim();
+
+  if (!text) {
+    return;
+  }
+
+  const messageWrapper = document.createElement("div");
+  messageWrapper.className = "message-me";
+  messageWrapper.innerHTML = `
+    <p class="sender">Du</p>
+    <div class="message-cont">
+      <p class="message"></p>
+    </div>
+  `;
+
+  messageWrapper.querySelector(".message").textContent = text;
+  chatArea.appendChild(messageWrapper);
+  messageInput.value = "";
+  chatArea.scrollTop = chatArea.scrollHeight;
+}
+
+sendButton.addEventListener("click", displayMessage);
+
+messageInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    displayMessage();
+  }
+});
+displayMessage();
 loadUsers();
