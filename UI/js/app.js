@@ -45,6 +45,8 @@ const chatArea = document.querySelector(".chat-area");
 function displayMessage() {
   const text = messageInput.value.trim();
 
+  //localStorage.setItem(text);
+
   if (!text) {
     return;
   }
@@ -52,7 +54,7 @@ function displayMessage() {
   const messageWrapper = document.createElement("div");
   messageWrapper.className = "message-me";
   messageWrapper.innerHTML = `
-    <p class="sender">Du</p>
+    <p class="sender">You</p>
     <div class="message-cont">
       <p class="message"></p>
     </div>
@@ -72,5 +74,6 @@ messageInput.addEventListener("keydown", (event) => {
     displayMessage();
   }
 });
+
 displayMessage();
 loadUsers();
