@@ -20,7 +20,6 @@ p {
 button {
     transition: opacity 0.1s;
     border: none;
-    background-color: rgb(0, 167, 213);
     border-radius: 25px;
     cursor: pointer;
 }

@@ -12,7 +12,7 @@
 }
 
 .opened-contact {
-    background-color: rgb(0, 167, 213);
+    background-color: rgb(0, 219, 124);
     border-radius: 10px;
     padding: 10px;
     display: inline-flex;
@@ -21,6 +21,28 @@
     gap: 10px;
     justify-self: center;
     align-self: start;
+}
+
+.opened-contact-heading {
+    margin: 0px;
+    font-weight: bold;
+    color: rgb(46, 46, 46);
+}
+
+.opened-contact-number,
+.opened-contact-name {
+    font-size: 13px;
+    color: rgb(90, 90, 90);
+    margin: 2px;
+}
+
+.opened-contact-picture-cont {
+    margin-right: 10px;
+}
+
+.opened-contact-picture {
+    width: 50px;
+    border-radius: 25px;
 }
 
 .chat-area {
@@ -50,10 +72,7 @@
 .sender {
     font-size: 12px;
     color: rgb(150, 150, 150);
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 0px;
-    margin-bottom: 3px;
+    margin: 0px 3px 3px 3px;
 }
 
 .message-cont {
@@ -64,11 +83,12 @@
 }
 
 .message-them .message-cont {
-    background-color: rgb(0, 167, 213);
+    background-color: rgb(67, 67, 67);
+    color: rgb(209, 209, 209);
 }
 
 .message-me .message-cont {
-    background-color: rgb(50, 180, 128);
+    background-color: rgb(0, 219, 124);
 }
 
 .message {
@@ -89,7 +109,7 @@
 .actions-button {
     margin-left: 10px;
     padding: 10px;
-    background-color: rgb(50, 180, 128);
+    background-color: rgb(0, 219, 124);
 }
 
 .actions-button {
